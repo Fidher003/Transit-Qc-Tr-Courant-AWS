@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Transit Québec Trois-Rivières</title>
+  <meta name="description" content="Saisie et résultats. Les calculs sont faits sur le serveur." />
+<style id="tailwind-local">
+/* Self-contained equivalents of the Tailwind 3 utilities already used by the
+   original file. No new layout, controls, typography scale or colour palette.
+   Preflight follows Tailwind CSS v3.4.17 (MIT, Tailwind Labs, Inc.). */
+*,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+::before,::after{--tw-content:''}
+html,:host{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}
+body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){text-decoration:underline dotted}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}
+code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}
+table{text-indent:0;border-color:inherit;border-collapse:collapse}
+button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}
+button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}
+:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}
+ol,ul,menu{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}
+button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}
+.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}
+.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-2{height:.5rem}.w-full{width:100%}.min-w-full{min-width:100%}.max-w-7xl{max-width:80rem}.max-h-\[360px\]{max-height:360px}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}
+.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem * (1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem * var(--tw-space-y-reverse))}
+.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-xl{border-radius:.75rem}.rounded-full{border-radius:9999px}.border{border-width:1px}
+.border-slate-200{border-color:#e2e8f0}.border-amber-200{border-color:#fde68a}.border-blue-200{border-color:#bfdbfe}.border-emerald-200{border-color:#a7f3d0}.border-red-200{border-color:#fecaca}
+.bg-amber-50{background-color:#fffbeb}.bg-blue-50{background-color:#eff6ff}.bg-emerald-50{background-color:#ecfdf5}.bg-red-50{background-color:#fef2f2}.bg-slate-50{background-color:#f8fafc}.bg-slate-100{background-color:#f1f5f9}.bg-slate-700{background-color:#334155}.bg-slate-900{background-color:#0f172a}.bg-white{background-color:#fff}
+.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.pb-2{padding-bottom:.5rem}.pl-5{padding-left:1.25rem}
+.text-left{text-align:left}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xs{font-size:.75rem;line-height:1rem}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.leading-tight{line-height:1.25}.list-disc{list-style-type:disc}
+.text-slate-50{color:#f8fafc}.text-slate-500{color:#64748b}.text-slate-600{color:#475569}.text-slate-700{color:#334155}.text-slate-800{color:#1e293b}.text-slate-900{color:#0f172a}.text-white{color:#fff}.text-emerald-700{color:#047857}.text-red-700{color:#b91c1c}
+.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / .05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+.hover\:bg-slate-50:hover{background-color:#f8fafc}.hover\:bg-slate-800:hover{background-color:#1e293b}
+@media(min-width:640px){.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:justify-between{justify-content:space-between}}
+@media(min-width:768px){.md\:p-6{padding:1.5rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}}
+@media(min-width:1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+  </style>
+<style>
+    :root { color-scheme: dark; }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(255,255,255,.72), transparent 34%),
+        linear-gradient(145deg, #dbeafe 0%, #e8f1f8 45%, #cbddeb 100%);
+      color: #0f172a;
+      transition: background .25s ease, color .25s ease;
+    }
+    body.app-night {
+      color-scheme: dark;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(45,78,112,.36), transparent 34%),
+        linear-gradient(145deg, #071523 0%, #0b1d30 48%, #102b46 100%);
+      color: #e6eef8;
+    }
+    body.app-night .bg-white { background-color: #10243a !important; }
+    body.app-night .bg-slate-50 { background-color: #142a43 !important; }
+    body.app-night .bg-slate-100 { background-color: #1b3552 !important; }
+    body.app-night .bg-slate-900 { background-color: #06111f !important; }
+    body.app-night .bg-blue-50 { background-color: #0e2944 !important; }
+    body.app-night .bg-emerald-50 { background-color: #103a35 !important; }
+    body.app-night .bg-amber-50 { background-color: #403316 !important; }
+    body.app-night .bg-red-50 { background-color: #402129 !important; }
+    body.app-night .text-slate-900,
+    body.app-night .text-slate-800 { color: #eef6ff !important; }
+    body.app-night .text-slate-700,
+    body.app-night .text-slate-600,
+    body.app-night .text-slate-500 { color: #b9cadc !important; }
+    body.app-night .text-emerald-700 { color: #86efc4 !important; }
+    body.app-night .text-red-700 { color: #fca5a5 !important; }
+    body.app-night .border,
+    body.app-night .border-slate-200,
+    body.app-night .border-blue-200,
+    body.app-night .border-emerald-200,
+    body.app-night .border-amber-200,
+    body.app-night .border-red-200 { border-color: #355473 !important; }
+    body.app-night input,
+    body.app-night select {
+      background-color: #0b1a2b !important;
+      color: #eef6ff !important;
+      border-color: #456482 !important;
+    }
+    body.app-night button.border { background-color: #132a43; color: #e7f1fb; }
+    body.app-night button.border:hover { background-color: #1c3a5a; }
+    body.app-night #runBtn { background-color: #1c4d73 !important; }
+    body.app-night #progressBar { background-color: #5f96bf !important; }
+
+
+    .full-table-details { margin-top: 1rem; }
+    .full-table-details > summary {
+      cursor: pointer;
+      user-select: none;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-weight: 600;
+      color: #b9cadc;
+    }
+    .full-table-details > summary::-webkit-details-marker { display: none; }
+    .full-table-details > summary::before {
+      content: '▶';
+      font-size: .72rem;
+      transition: transform .15s ease;
+    }
+    .full-table-details[open] > summary::before { transform: rotate(90deg); }
+    .report-table-wrap { margin-top: 1rem; }
+
+
+    /* Affichage mobile : les lignes du tableau deviennent des cartes lisibles sans défilement horizontal. */
+    @media (max-width: 767px) {
+      .max-w-7xl { padding-left: .75rem !important; padding-right: .75rem !important; }
+      header h1 { font-size: 1.35rem !important; line-height: 1.75rem !important; }
+      header p { line-height: 1.35rem; }
+      section { padding: .8rem !important; }
+      input, select, button { min-height: 44px; font-size: 16px !important; }
+      #copyBtn, #downloadBtn { flex: 1 1 9rem; }
+      .results-table, .results-table tbody { display: block; width: 100%; }
+      .results-table thead { display: none; }
+      .results-table .result-row {
+        display: grid;
+        grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+        gap: 0 .75rem;
+        padding: .55rem .65rem .35rem;
+        border-top: 1px solid #355473;
+      }
+      .results-table .result-row:first-child { border-top: 0; }
+      .results-table .result-row td {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        padding: .32rem .1rem !important;
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+      }
+      .results-table .result-row td::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: .1rem;
+        font-size: .66rem;
+        line-height: .85rem;
+        font-weight: 700;
+        letter-spacing: .035em;
+        text-transform: uppercase;
+        color: #7899b8;
+      }
+      .results-table .result-row td[data-label="SOW max au point (kn)"]::before {
+        white-space: nowrap;
+        letter-spacing: .02em;
+      }
+      .results-table .result-row td:first-child {
+        grid-column: 1 / -1;
+        font-size: 1rem;
+        padding-top: .15rem !important;
+      }
+      .results-table .result-detail {
+        display: block;
+        padding: 0 .65rem .7rem;
+        border-bottom: 1px solid #355473;
+      }
+      .results-table .result-detail td {
+        display: block;
+        width: 100%;
+        padding: .1rem .1rem .45rem !important;
+        line-height: 1.15rem;
+        white-space: normal;
+      }
+      #log { max-height: 260px !important; font-size: .7rem !important; white-space: pre-wrap; overflow-wrap: anywhere; }
+      #directivesSummary { font-size: .82rem !important; }
+    }
+  </style>
+<style id="failure-presentation-style">
+/* Presentation only: original summary and original button keep their own nodes. */
+#initialPlanFeedback.alternative-ready {
+  margin-top: .75rem;
+  background: #402129;
+  border: 1px solid #355473;
+  border-radius: 1rem;
+  overflow-wrap: anywhere;
+}
+#initialPlanFeedback.alternative-ready > #summary { margin-top: 0; }
+#initialPlanFeedback.alternative-ready > #summary > .bg-red-50 {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0;
+  padding: .75rem .75rem 0;
+}
+#initialPlanFeedback.alternative-ready > #recalcPrompt:not(.hidden) {
+  display: block;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0;
+  padding: 0 .75rem .75rem;
+  margin: 0;
+}
+#initialPlanFeedback.alternative-ready > #recalcPrompt > :not(#recalcBtn) {
+  display: none;
+}
+#initialPlanFeedback #recalcBtn {
+  max-width: 100%;
+  min-height: 44px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  text-align: center;
+  line-height: 1.4;
+}
+#initialPlanFeedback #recalcBtn:disabled { opacity: .65; cursor: wait; }
+#initialPlanFeedback #recalcBtn:focus-visible { outline: 2px solid #70a8d1; outline-offset: 3px; }
+#initialPlanFeedback .failure-landmark-note {
+  color: #b9cadc;
+  font-size: .75rem;
+  line-height: 1.2rem;
+  margin-top: .4rem;
+}
+@media (max-width: 639px) {
+  #initialPlanFeedback #recalcBtn { width: 100%; }
+}
+</style>
+<style id="mobile-compact-safe-20261018">
+/* Presentation only. No calculation/current/DSQ rule is changed. */
+#status:empty { display:none; }
+@media (max-width: 767px) {
+  #inputPanel .grid.gap-3 { gap:.52rem !important; }
+  #inputPanel label > span { margin-bottom:.18rem !important; line-height:1rem; }
+  #inputPanel input, #inputPanel select { padding-top:.42rem !important; padding-bottom:.42rem !important; }
+  #inputPanel #runBtn { min-height:42px; padding-top:.55rem !important; padding-bottom:.55rem !important; }
+  #inputPanel .departure-datetime {
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    gap:.45rem !important;
+  }
+  #inputPanel .departure-datetime label { min-width:0; }
+  #inputPanel .departure-datetime input {
+    width:calc(100% - 19px) !important;
+    max-width:calc(100% - 19px) !important;
+    min-width:0;
+    box-sizing:border-box;
+    padding-left:.55rem !important;
+    padding-right:.45rem !important;
+  }
+  #inputPanel .departure-datetime label:first-child input { margin-right:auto; }
+  #inputPanel .departure-datetime label:last-child input { margin-left:auto; }
+  #summary > .bg-emerald-50 { padding:.55rem .7rem !important; }
+  .report-table-wrap { margin-top:.65rem !important; }
+  #reportTbody .result-row, #recalcReportTbody .result-row { margin-top:.36rem; margin-bottom:.36rem; }
+  #reportTbody .result-row td, #recalcReportTbody .result-row td { padding-top:.25rem !important; padding-bottom:.25rem !important; }
+  .route-update-date { margin-top:0 !important; margin-bottom:.12rem !important; line-height:.82rem !important; font-size:.68rem !important; color:#7899b8 !important; font-weight:700; }
+  #reportTbody .report-eta-meta, #recalcReportTbody .report-eta-meta { display:block; margin-bottom:.12rem; font-size:.68rem; line-height:.82rem; color:#7899b8; font-weight:700; }
+  #reportTbody .report-number, #recalcReportTbody .report-number { font-size:1.08rem; line-height:1.22rem; font-weight:700; }
+}
+</style>
+<style id="route-update-stage1-style">
+  .route-update-time,
+  .route-update-speed {
+    width: 7.1rem;
+    min-width: 6.6rem;
+    border: 1px solid #456482;
+    border-radius: .65rem;
+    padding: .35rem .5rem;
+    background: #0b1a2b;
+    color: #eef6ff;
+  }
+  .route-update-speed { width: 5.3rem; min-width: 4.8rem; }
+  .report-eta-meta { display:block; font-size:.72rem; line-height:1rem; color:#64748b; font-weight:600; }
+  .report-eta-time { display:block; }
+  .report-depth-pc {
+    display:block;
+    margin-top:.12rem;
+    font-size:.68rem;
+    line-height:.82rem;
+    color:#7899b8;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .route-update-date,
+  .route-update-note {
+    display: block;
+    margin-top: .22rem;
+    font-size: .68rem;
+    line-height: .9rem;
+    color: #7899b8;
+    white-space: normal;
+  }
+  .route-update-btn {
+    border: 1px solid #456482;
+    border-radius: .7rem;
+    padding: .42rem .65rem;
+    font-size: .78rem;
+    font-weight: 600;
+    line-height: 1.1rem;
+    white-space: normal;
+    background: #132a43;
+    color: #eef6ff;
+  }
+  .route-update-btn:hover { background: #1c3a5a; }
+  .route-update-btn.hidden { display: none !important; }
+  .route-update-btn:disabled { opacity: .55; cursor: wait; }
+  .route-update-cell { min-width: 8rem; }
+  .route-update-pending { color: #fbbf24; font-weight: 600; }
+  .route-update-pending.hidden { display: none !important; }
+  .route-update-btn.route-update-dirty { box-shadow: 0 0 0 2px rgba(251,191,36,.35); }
+  .report-current-value { font-weight: 750; }
+  .report-current-value.current-up { color: #2563eb; }
+  .report-current-value.current-down { color: #dc2626; }
+  .report-current-value.current-slack { color: #64748b; }
+  body.app-night .report-current-value.current-up { color: #4fb8e8; }
+  body.app-night .report-current-value.current-down { color: #fb7185; }
+  body.app-night .report-current-value.current-slack { color: #94a3b8; }
+  .report-current-arrow {
+    display: inline-block;
+    margin-left: .2rem;
+    font-size: 1.55em;
+    line-height: .72;
+    font-weight: 950;
+    -webkit-text-stroke: .7px currentColor;
+    text-shadow: 0 0 .01px currentColor;
+    vertical-align: -.1em;
+  }
+  @media (max-width: 767px) {
+    /* Sur mobile, la profondeur est déjà incluse dans le libellé DSQ de la carte. */
+    .report-depth-pc { display:none; }
+    /* Ergonomie iPhone : la case ETA/heure est volontairement ~5 mm plus étroite. */
+    .route-update-time { width: calc(100% - 19px); min-width: 0; max-width: calc(100% - 19px); }
+    .route-update-speed { width: 5.3rem; min-width: 0; max-width: calc(100% - .5rem); }
+    .route-update-btn { width: 100%; min-height: 44px; }
+    .route-update-cell { min-width: 0; }
+
+    /* Cartes de points de rapport : un peu de relief, sans ajouter de contenu. */
+    #reportTbody .result-row,
+    #recalcReportTbody .result-row {
+      margin: .48rem .42rem;
+      padding: .48rem .58rem .4rem;
+      border: 1px solid #355473;
+      border-radius: .9rem;
+      background: rgba(16,36,58,.82);
+      box-shadow: 0 2px 7px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.035);
+    }
+    #reportTbody .result-row:first-child,
+    #recalcReportTbody .result-row:first-child { border-top: 1px solid #355473; }
+    #reportTbody .result-row > td:first-child,
+    #recalcReportTbody .result-row > td:first-child {
+      margin: -.48rem -.58rem .16rem;
+      padding: .46rem .58rem !important;
+      border-bottom: 1px solid rgba(112,168,209,.22);
+      border-radius: .86rem .86rem 0 0;
+      background: rgba(28,58,90,.42);
+      letter-spacing: .01em;
+    }
+    #reportTbody .result-row.bg-red-50,
+    #recalcReportTbody .result-row.bg-red-50 {
+      background: rgba(64,33,41,.9) !important;
+      border-color: #7f4a55 !important;
+    }
+  }
+</style>
+<style>
+  .lt-hidden{display:none!important}
+  .lt-muted{font-size:11px;opacity:.75}
+  .lt-spin{display:inline-block;width:12px;height:12px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:ltspin .8s linear infinite;vertical-align:-2px;margin-right:6px}
+  @keyframes ltspin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body class="app-night bg-slate-50 text-slate-900">
+<div class="max-w-7xl mx-auto p-4 md:p-6">
+  <header class="mb-4">
+    <h1 class="text-2xl md:text-3xl font-semibold">Transit Québec Trois-Rivières</h1>
+    <div class="lt-muted mt-1">Version légère : les calculs sont faits sur le serveur (moteur <span id="ltEngineVersion">—</span>).</div>
+  </header>
+
+  <div class="mb-4 inline-flex rounded-2xl border p-1 bg-white shadow-sm" role="tablist" aria-label="Mode de calcul">
+    <button id="ltTabTransit" type="button" class="rounded-xl px-5 py-2 text-sm font-semibold bg-slate-900 text-white" aria-selected="true">Transit</button>
+    <button type="button" class="rounded-xl px-5 py-2 text-sm font-semibold opacity-50 cursor-not-allowed" aria-disabled="true" title="Prochaine étape">Optimisation</button>
+    <button type="button" class="rounded-xl px-5 py-2 text-sm font-semibold opacity-50 cursor-not-allowed" aria-disabled="true" title="Prochaine étape">Statistiques</button>
+  </div>
+
+  <details id="ltSettings" class="mb-4 bg-white rounded-2xl shadow-sm border p-3">
+    <summary class="cursor-pointer text-sm font-semibold text-slate-700">Connexion au serveur</summary>
+    <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3">
+      <label class="text-sm"><span class="block text-slate-700 mb-1">Adresse de l’API AWS</span><input id="ltApiUrl" type="url" class="w-full border rounded-xl px-3 py-2 text-xs" /></label>
+      <label class="text-sm"><span class="block text-slate-700 mb-1">Clé d’accès (si exigée)</span><input id="ltApiKey" type="password" autocomplete="off" class="w-full border rounded-xl px-3 py-2" /></label>
+    </div>
+    <div id="ltConn" class="lt-muted mt-2"></div>
+  </details>
+
+  <div id="transitTabPanel" class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    <section id="inputPanel" class="bg-white rounded-2xl shadow-sm border p-4">
+      <div class="grid grid-cols-1 gap-3">
+        <label class="text-sm">
+          <span class="block text-slate-700 mb-1">Direction</span>
+          <select id="direction" class="w-full border rounded-xl px-3 py-2">
+            <option value="QPOR">Station Québec → Station POR</option>
+            <option value="PORQ">Station POR → Station Québec</option>
+          </select>
+        </label>
+        <label class="text-sm">
+          <span class="block text-slate-700 mb-1">Type de navire</span>
+          <select id="vesselType" class="w-full border rounded-xl px-3 py-2"><option>Conteneur</option><option>Autre</option></select>
+        </label>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <label class="text-sm"><span class="block text-slate-700 mb-1">Tirant (m)</span><input id="draftM" type="number" step="0.01" value="8.10" class="w-full border rounded-xl px-3 py-2" /></label>
+          <label class="text-sm"><span class="block text-slate-700 mb-1">Largeur (m)</span><input id="beamM" type="number" step="0.1" value="33" class="w-full border rounded-xl px-3 py-2" /></label>
+        </div>
+        <label class="text-sm">
+          <span class="block text-slate-700 mb-1">Vitesse sur l'eau maximum (kn)</span>
+          <input id="maxSowKn" type="number" min="7" max="20" step="0.1" value="12.0" class="w-full border rounded-xl px-3 py-2" />
+        </label>
+        <div class="departure-datetime grid grid-cols-2 gap-2">
+          <label class="text-sm"><span class="block text-slate-700 mb-1">Date départ</span><input id="depDate" type="date" class="w-full border rounded-xl px-3 py-2" /></label>
+          <label class="text-sm"><span class="block text-slate-700 mb-1">Heure départ</span><input id="depTime" type="time" step="60" class="w-full border rounded-xl px-3 py-2" /></label>
+        </div>
+        <button id="runBtn" class="w-full bg-slate-900 text-white rounded-2xl py-3 font-semibold hover:bg-slate-800">Calculer</button>
+        <div id="status" class="text-sm text-slate-700"></div>
+        <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden"><div id="progressBar" class="bg-slate-700 h-2" style="width:0%"></div></div>
+      </div>
+    </section>
+    <section class="bg-white rounded-2xl shadow-sm border p-4 lg:col-span-2">
+      <div id="ltResult"><div class="text-sm text-slate-500">Entrez les données du transit puis cliquez « Calculer ».</div></div>
+      <div class="mt-3 flex flex-wrap gap-2"><button id="ltCopyLog" type="button" class="border rounded-xl px-3 py-2 text-sm lt-hidden">Copier le journal</button></div>
+      <div id="ltSource" class="lt-muted mt-2"></div>
+    </section>
+  </div>
+</div>
+<script>
+// Page légère : aucune règle de calcul ici. Envoi des données à l'API AWS et affichage de la réponse.
+(function(){
+  const $=id=>document.getElementById(id);
+  const KEY='transit-qc-tr-leger-v1',DEFAULT_URL='https://gsmynspvqejidjxcpoziultmm40ztbzp.lambda-url.ca-central-1.on.aws/';
+  const load=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'{}');}catch(_){return{};}};
+  const save=o=>{try{localStorage.setItem(KEY,JSON.stringify(o));}catch(_){}};
+  const st=load();
+  $('ltApiUrl').value=st.url||DEFAULT_URL;$('ltApiKey').value=st.key||'';
+  for(const id of ['direction','vesselType','draftM','beamM','maxSowKn'])if(st.form?.[id]!=null&&$(id))$(id).value=st.form[id];
+  const persist=()=>save({url:$('ltApiUrl').value.trim(),key:$('ltApiKey').value.trim(),form:Object.fromEntries(['direction','vesselType','draftM','beamM','maxSowKn'].map(id=>[id,$(id)?.value]))});
+  ['ltApiUrl','ltApiKey','direction','vesselType','draftM','beamM','maxSowKn'].forEach(id=>$(id)?.addEventListener('change',persist));
+  // date et heure de Québec par défaut
+  try{const f=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Toronto',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),g=t=>f.find(p=>p.type===t)?.value;
+    if(!$('depDate').value)$('depDate').value=`${g('year')}-${g('month')}-${g('day')}`;if(!$('depTime').value)$('depTime').value=`${g('hour')==='24'?'00':g('hour')}:${g('minute')}`;}catch(_){}
+
+  async function api(body,timeoutMs){
+    const url=$('ltApiUrl').value.trim()||DEFAULT_URL,key=$('ltApiKey').value.trim();
+    const ctl=new AbortController(),t=setTimeout(()=>ctl.abort(),timeoutMs||15*60000);
+    let r;try{r=await fetch(url,{method:'POST',headers:{'content-type':'application/json',...(key?{'x-api-key':key}:{})},body:JSON.stringify(body),signal:ctl.signal});}
+    catch(e){throw new Error(e.name==='AbortError'?'Le serveur n’a pas répondu à temps.':'Serveur injoignable ('+(e.message||e)+').');}
+    finally{clearTimeout(t);}
+    let j;try{j=await r.json();}catch(_){throw new Error('Réponse illisible du serveur (HTTP '+r.status+').');}
+    if(!r.ok||!j.ok)throw new Error(j.error||('HTTP '+r.status));
+    if(j.version)$('ltEngineVersion').textContent='v'+j.version;
+    return j.result;
+  }
+  function setStatus(msg,kind){const n=$('status');if(!n)return;n.innerHTML=msg;n.className='text-sm '+(kind==='err'?'text-red-700':kind==='ok'?'text-emerald-700':'text-slate-700');}
+  function setBar(p){const b=$('progressBar');if(b)b.style.width=p+'%';}
+  let lastParams=null,busy=false;
+  function params(){return{direction:$('direction').value,vesselType:$('vesselType').value,draftM:Number($('draftM').value),beamM:Number($('beamM').value),maxSowKn:Number($('maxSowKn').value),depDate:$('depDate').value,depTime:$('depTime').value};}
+  async function run(recalc){
+    if(busy)return;busy=true;const btn=$('runBtn');btn.disabled=true;
+    const p=recalc&&lastParams?lastParams:params();lastParams=p;
+    const t0=Date.now(),tick=setInterval(()=>setStatus(`<span class="lt-spin"></span>${recalc?'Recalcul':'Calcul'} sur le serveur… ${Math.round((Date.now()-t0)/1000)} s`),500);
+    setBar(15);
+    try{
+      const r=await api({action:'transit',recalc:!!recalc,params:p});
+      $('ltResult').innerHTML=r.html||'<div class="text-sm">Aucun résultat.</div>';
+      $('ltSource').textContent=(r.currents||'')+` · calcul ${Math.round((Date.now()-t0)/1000)} s`;
+      $('ltCopyLog').classList.toggle('lt-hidden',!r.log);$('ltCopyLog').dataset.log=r.log||'';
+      // le résultat serveur contient le bouton « Recalculer » : il relance le calcul avec recalcul
+      const rb=$('ltResult').querySelector('#recalcBtn');if(rb){rb.disabled=false;}
+      setStatus(r.status||'Calcul terminé.',/interrompu|impossible|erreur|aucun/i.test(r.status||'')?'err':'ok');setBar(100);
+    }catch(e){setStatus(String(e.message||e),'err');setBar(0);}
+    finally{clearInterval(tick);busy=false;btn.disabled=false;}
+  }
+  $('runBtn').addEventListener('click',()=>run(false));
+  $('ltResult').addEventListener('click',ev=>{const b=ev.target.closest('#recalcBtn');if(b){ev.preventDefault();run(true);}});
+  $('ltCopyLog').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('ltCopyLog').dataset.log||'');setStatus('Journal copié.','ok');}catch(_){setStatus('Impossible de copier.','err');}});
+  // vérification de la connexion au chargement
+  api({action:'health'},30000).then(r=>{$('ltConn').textContent=`Serveur joignable — moteur v${r.version}.`;}).catch(e=>{$('ltConn').textContent='Serveur : '+e.message;$('ltSettings').open=true;});
+})();
+</script>
+</body>
+</html>
